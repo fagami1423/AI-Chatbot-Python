@@ -27,7 +27,7 @@ class ChatDataset(Dataset):
 with open("dataset_format.json","r") as f:
     questions = json.load(f)
 
-## ** write a function
+# todo: write a function to train the model using takes dataset a list
 
 def train(questions):
 
@@ -61,9 +61,7 @@ def train(questions):
     y_train = np.array(y_train)
     # y_train = torch.tensor(y_train)
 
-
-
-    #hyperparameters
+    # * hyperparameters
     batch_size = 8
     hidden_size = 8
     output_size = len(tags)
