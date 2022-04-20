@@ -8,6 +8,7 @@ class NeuralNet(nn.Module):
         self.l2 = nn.Linear(hidden_size, hidden_size)
         self.l3 = nn.Linear(hidden_size, num_classes)
         self.relu = nn.ReLU()
+        
     def forward(self, x):
         out = self.l1(x)
         out = self.relu(out)

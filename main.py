@@ -1,6 +1,7 @@
 import imp
 from typing import Optional
 from question import question_routes
+from product import product_routes
 from fastapi import FastAPI, Request
 from fastapi.staticfiles import StaticFiles
 from fastapi.middleware.cors import CORSMiddleware
@@ -24,3 +25,4 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 #     return {"answer": question}
 
 app.include_router(question_routes.router)
+app.include_router(product_routes.router)

@@ -12,7 +12,7 @@ from torch.utils.data import Dataset, DataLoader
 from model import NeuralNet
 
 class ChatDataset(Dataset):
-    def __init__(self):
+    def __init__(self,X_train,y_train):
         self.n_samples = len(X_train)
         self.x_data = X_train
         self.y_data = y_train
@@ -24,8 +24,8 @@ class ChatDataset(Dataset):
     def __len__(self):
         return self.n_samples
 
-with open("dataset_format.json","r") as f:
-    questions = json.load(f)
+# with open("dataset_format.json","r") as f:
+#     questions = json.load(f)
 
 # todo: write a function to train the model using takes dataset a list
 
@@ -69,7 +69,7 @@ def train(questions):
     learning_rate = 0.001
     num_epochs = 1000
 
-    dataset = ChatDataset()
+    dataset = ChatDataset(X_train,y_train)
     train_loader = DataLoader(dataset=dataset, batch_size=batch_size, shuffle=True)
 
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')

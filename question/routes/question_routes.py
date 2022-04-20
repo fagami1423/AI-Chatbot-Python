@@ -19,7 +19,7 @@ from fastapi.staticfiles import StaticFiles
 templates = Jinja2Templates(directory="templates")
 
 router = APIRouter(
-    prefix="/question",
+    prefix="/chatbot",
     tags=['Questions']
 )
 
@@ -36,8 +36,7 @@ async def find_all_questions():
 @router.get('/train')
 async def train_model():
     intents = serializeList(mongodatabase.question.find())
-    print(intents)
-    ## train.train(intents)
+    train.train(intents)
     return {"message": "Model has been trained and saved"}
  
 
@@ -68,8 +67,10 @@ async def delete_question(id,question: Question):
 async def post_input(input):
     response = chat.takeinput(input)
     question={
-
+        "question":input
     }
-    # question_id = mongodatabase.question.insert_one(dict(question)).inserted_id
+
+    question_id = mongodatabase.userinput.insert_one(dict(question)).inserted_id
     # return serializeDict(mongodatabase.question.find_one({"_id":ObjectId(question_id)}))
+    print(question_id)
     return response

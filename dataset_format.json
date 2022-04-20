@@ -37,6 +37,30 @@
      "patterns": ["today"],
      "responses": ["For rentals today please call 1-800-MYMOPED", "Same-day rentals please call 1-800-MYMOPED"],
      "context_filter": "rentalday"
+    },
+    {
+    "tag":"services",
+    "patterns":["What services do you give?","What are the services that you provide?","Which services do you provide?","What kind of services do you provide?"],
+    "responses":["we provide Artificial Intelligence and Machine Learning systems, web designs, web developements. We also provide integration of chatbot"]
+    },
+    {
+    "tag":"company",
+    "patterns": ["what is the name of your company?","Which company are you from?","What is the name of your business?","What is your business's name?","What is your company's name"],
+    "responses":["My company's name is Chatbot","chatbot is the name of my business","Chatbot is the name of my company"],
+    "context_filter":""
+    },
+    {
+    "tag":"address",
+    "patterns":["What is your address?","what is your location?","What is your address?","What is your exact location?","Where exactly are you?","Where are you located?","which city are you in?"],
+    "responses":["We are at Toronto, Ontario","We are currently in Toronto, Ontario","We are in Toronto, Ontario"]
+    },
+    {
+    "tag":"products",
+    "patterns":["What are the products do you sell?","What kinds of things do you sell?","What kind of products do you sell?","What do you sell?","What kinds of things do you sell?"],
+    "responses":[""],
+    "context_filter":""
     }
-]
+    
+ ]
+    
 }

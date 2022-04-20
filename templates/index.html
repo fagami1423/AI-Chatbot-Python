@@ -38,7 +38,7 @@
                 function getBotResponse() {
                     var rawText = $('#textInput').val();
                     console.log(rawText)
-                    url = `http://localhost:8000/question/chat?input=${rawText}`
+                    url = `http://localhost:8000/chatbot/chat?input=${rawText}`
                     var userHtml = '<p class="userText"><span>' + rawText + '</span></p>';
                     $('#textInput').val("");
                     $('#chatbox').append(userHtml);
