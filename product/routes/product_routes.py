@@ -11,6 +11,7 @@ from bson import ObjectId
 from ..models.product_model import Product
 import train
 import chat
+import json
 
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
@@ -38,12 +39,12 @@ async def find_all_products():
 async def find_one_product(id):
     return serializeDict(mongodatabase.product.find_one({"_id":ObjectId(id)}))
 
-
 @router.post('/')
-async def create_product(product: Product):
-    product_id = mongodatabase.product.insert_one(dict(product)).inserted_id
-    return serializeDict(mongodatabase.product.find_one({"_id":ObjectId(product_id)}))
-
+async def create_many_product(**product):
+    mongodatabase.product.drop()
+    products = json.loads(product['product'])
+    mongodatabase.product.insert_many(products)
+    return "Products inserted successfully"
 
 @router.put('/{id}')
 async def update_product(id,product: Product):
@@ -54,7 +55,6 @@ async def update_product(id,product: Product):
 
 @router.delete('/{id}')
 async def delete_product(id,product: Product):
-    
     return serializeDict(mongodatabase.user.find_one_and_delete({"_id":ObjectId(id)}))
 
 

@@ -1,0 +1,301 @@
+[
+    {
+        "name": "Iphone 13 Pro Max",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 1
+    },
+    {
+        "name": "Iphone 12 Pro Max",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Iphone 11 Pro Max",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Iphone 13 Pro",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 1
+    },
+    {
+        "name": "Iphone 12 Pro",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Iphone 11 Pro",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Iphone 11",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Iphone X",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Xperia XZ2",
+        "category": "Phone",
+        "company": "Sony",
+        "is_top": 0
+    },
+    {
+        "name": "Galaxy S22 ultra",
+        "category": "Phone",
+        "company": "Samsung",
+        "is_top": 0
+    },
+    {
+        "name": "Galaxy S22 +",
+        "category": "Phone",
+        "company": "Samsung",
+        "is_top": 1
+    },
+    {
+        "name": "Galaxy Note 10+",
+        "category": "Phone",
+        "company": "Samsung",
+        "is_top": 0
+    },
+    {
+        "name": "Surface Pro",
+        "category": "Tablet",
+        "company": "Microsoft",
+        "is_top": 0
+    },
+    {
+        "name": "Ipad Pro",
+        "category": "Tablet",
+        "company": "Apple",
+        "is_top": 1
+    },
+    {
+        "name": "Tab M10 Plus",
+        "category": "Tablet",
+        "company": "Lenovo",
+        "is_top": 0
+    },
+    {
+        "name": "Iphone 12 Pro Max",
+        "category": "Phone",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Pad Mini",
+        "category": "Tablet",
+        "company": "Realme",
+        "is_top": 0
+    },
+    {
+        "name": "Legion Y700",
+        "category": "Tablet",
+        "company": "Lenovo",
+        "is_top": 0
+    },
+    {
+        "name": "Galaxy Tab",
+        "category": "Tablet",
+        "company": "Samsung",
+        "is_top": 0
+    },
+    {
+        "name": "Zenwatch",
+        "category": "Smartwear",
+        "company": "Asus",
+        "is_top": 0
+    },
+    {
+        "name": "Zenwatch 3",
+        "category": "Smartwear",
+        "company": "Asus",
+        "is_top": 1
+    },
+    {
+        "name": "Smart outdoor watch",
+        "category": "Smartwear",
+        "company": "Casio",
+        "is_top": 0
+    },
+    {
+        "name": "Garrett HR",
+        "category": "Smartwear",
+        "company": "Fossil",
+        "is_top": 0
+    },
+    {
+        "name": "Watch 2 Classic",
+        "category": "Smartwear",
+        "company": "Huawei",
+        "is_top": 0
+    },
+    {
+        "name": "G watch",
+        "category": "Smartwear",
+        "company": "LG",
+        "is_top": 1
+    },
+    {
+        "name": "Tambour Horizon ",
+        "category": "Smartwear",
+        "company": "Louis Vuitton",
+        "is_top": 0
+    },
+    {
+        "name": "Moto 360 Sport",
+        "category": "Smartwear",
+        "company": "Motorola",
+        "is_top": 0
+    },
+    {
+        "name": "Mi watch",
+        "category": "Smartwear",
+        "company": "Xiaomi",
+        "is_top": 1
+    },
+    {
+        "name": "Smartwatch 3",
+        "category": "Smartwear",
+        "company": "Sony",
+        "is_top": 0
+    },
+    {
+        "name": "SONY WF-1000XM4",
+        "category": "Earbud",
+        "company": "Sony",
+        "is_top": 1
+    },
+    {
+        "name": "JABRA ELITE 3",
+        "category": "Earbud",
+        "company": "Jabra",
+        "is_top": 0
+    },
+    {
+        "name": "BOSE QUIETCOMFORT EARBUDS",
+        "category": "Earbud",
+        "company": "Bose",
+        "is_top": 0
+    },
+    {
+        "name": "BEATS FIT PRO",
+        "category": "Earbud",
+        "company": "Beats",
+        "is_top": 0
+    },
+    {
+        "name": "Apple Airpod pro",
+        "category": "Earbud",
+        "company": "Apple",
+        "is_top": 1
+    },
+    {
+        "name": "Macbook Air M1 Pro",
+        "category": "Laptop",
+        "company": "Apple",
+        "is_top": 1
+    },
+    {
+        "name": "HP Spectre x360 14",
+        "category": "Laptop",
+        "company": "HP",
+        "is_top": 0
+    },
+    {
+        "name": "Dell XPS 13",
+        "category": "Laptop",
+        "company": "Dell",
+        "is_top": 1
+    },
+    {
+        "name": "Acer Chromebook Spin 713",
+        "category": "Laptop",
+        "company": "Acer",
+        "is_top": 0
+    },
+    {
+        "name": "Pavilion Aero 13",
+        "category": "Laptop",
+        "company": "HP",
+        "is_top": 0
+    },
+    {
+        "name": "Macbook Air M1",
+        "category": "Laptop",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Swift 3",
+        "category": "Laptop",
+        "company": "Acer",
+        "is_top": 0
+    },
+    {
+        "name": "Gram 17",
+        "category": "Laptop",
+        "company": "LG",
+        "is_top": 0
+    },
+    {
+        "name": "Macbook Pro 2021",
+        "category": "Laptop",
+        "company": "Apple",
+        "is_top": 0
+    },
+    {
+        "name": "Yoga 9i",
+        "category": "Laptop",
+        "company": "Lenovo",
+        "is_top": 1
+    },
+    {
+        "name": "Inspiron 16 Plus",
+        "category": "Laptop",
+        "company": "Dell",
+        "is_top": 0
+    },
+    {
+        "name": "Surface Pro 8",
+        "category": "Laptop",
+        "company": "Microsoft",
+        "is_top": 1
+    },
+    {
+        "name": "Razer Blade 14",
+        "category": "Laptop",
+        "company": "Razer",
+        "is_top": 0
+    },
+    {
+        "name": "G15",
+        "category": "Laptop",
+        "company": "Dell",
+        "is_top": 0
+    },
+    {
+        "name": "Macbook Air M1",
+        "category": "Laptop",
+        "company": "Apple",
+        "is_top": 1
+    },
+    {
+        "name": "Blade pro 17",
+        "category": "Laptop",
+        "company": "Razer",
+        "is_top": 0
+    }]

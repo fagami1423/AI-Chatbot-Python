@@ -1,8 +1,7 @@
 {"intents": [
     {"tag": "greeting",
      "patterns": ["Hi", "How are you", "Is anyone there?","Hey", "Hello", "Good day", "I have a question", "Can you help me?", "What can you do?", "What can I do for you?","Tell me something", "Whats up", "How are you doing?"],
-     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"],
-     "context_set": ""
+     "responses": ["Hello, thanks for visiting", "Good to see you again", "Hi there, how can I help?"]
     },
     {"tag": "goodbye",
      "patterns": ["Bye", "See you later", "Goodbye"],
@@ -16,37 +15,31 @@
      "patterns": ["What hours are you open?", "What are your hours?", "When are you open?" ],
      "responses": ["We're open every day 9am-9pm", "Our hours are 9am-9pm every day"]
     },
-    {"tag": "mopeds",
-     "patterns": ["Which mopeds do you have?", "What kinds of mopeds are there?", "What do you rent?" ],
-     "responses": ["We rent Yamaha, Piaggio and Vespa mopeds", "We have Piaggio, Vespa and Yamaha mopeds"]
-    },
     {"tag": "payments",
      "patterns": ["Do you take credit cards?", "Do you accept Mastercard?", "Are you cash only?" ],
      "responses": ["We accept VISA, Mastercard and AMEX", "We accept most major credit cards"]
     },
     {"tag": "opentoday",
-     "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?"],
-     "responses": ["We're open every day from 9am-9pm", "Our hours are 9am-9pm every day"]
+     "patterns": ["Are you open today?", "When do you open today?", "What are your hours today?","which days are you open?"],
+     "responses": ["We're open every day from 9am-9pm from mon-fri", "Our hours are 9am-9pm every day mon-fri"]
     },
-    {"tag": "rental",
-     "patterns": ["Can we rent a moped?", "I'd like to rent a moped", "How does this work?" ],
-     "responses": ["Are you looking to rent today or later this week?"],
-     "context_set": "rentalday"
+    {"tag": "feedbacks",
+     "patterns": ["Can you tell me which one is better?", "Can you tell me the price of the product?", "Which one is better?","Which one is good?" ],
+     "responses": ["I am a bot, I am in the process of learning new things. But you can contact on this number +1 646 707 8903 or email on test@example.com"]
     },
-    {"tag": "today",
-     "patterns": ["today"],
-     "responses": ["For rentals today please call 1-800-MYMOPED", "Same-day rentals please call 1-800-MYMOPED"],
-     "context_filter": "rentalday"
+    {"tag": "contact",
+     "patterns": ["What is  your contact number?","what is your phone number?","whom do I contact?","Can  you give your contact details?","Please provide me a contact information."],
+     "responses": ["Yes, phone: +1 646 707 8903, email: test@example.com"]
     },
     {
     "tag":"services",
     "patterns":["What services do you give?","What are the services that you provide?","Which services do you provide?","What kind of services do you provide?"],
-    "responses":["we provide Artificial Intelligence and Machine Learning systems, web designs, web developements. We also provide integration of chatbot"]
+    "responses":["We sell electronic gagdets like phones, smartwear, earbuds and laptops throug in person or online"]
     },
     {
     "tag":"company",
     "patterns": ["what is the name of your company?","Which company are you from?","What is the name of your business?","What is your business's name?","What is your company's name"],
-    "responses":["My company's name is Chatbot","chatbot is the name of my business","Chatbot is the name of my company"],
+    "responses":["My company's name is Chatbot","Chatbot is the name of my business","Chatbot is the name of my company"],
     "context_filter":""
     },
     {
@@ -56,11 +49,39 @@
     },
     {
     "tag":"products",
-    "patterns":["What are the products do you sell?","What kinds of things do you sell?","What kind of products do you sell?","What do you sell?","What kinds of things do you sell?"],
-    "responses":[""],
-    "context_filter":""
+    "patterns":["What are the products do you sell?","What kinds of things do you sell?","What kind of products do you sell?","What do you sell?","What kinds of things do you sell?","What are the top products in your company?","what are the main products?","suggest me somem products"],
+    "responses":[]
+    },
+    {
+        "tag":"phone",
+        "patterns":["What are the top smart phones you sell?","What are the main phones do you sell?","What are the main phones found in your company?","What are the main mobile phones do you have?","what are the top mobile phones do you have?","what phones do you have?"],
+        "responses":[]
+    },
+    {
+        "tag":"tablet",
+        "patterns":["What are the top tablets you sell?","What are the main tablets do you sell?","What are the main tablets found in your company?","What are the main tablets do you have?","what are the tablets do you have?","what tablets do you have?"],
+        "responses":[]
+    },
+    {
+        "tag":"smartwear",
+        "patterns":["What are the top Smartwear you sell?","What are the main smartwears do you sell?","What are the main smartwears found in your company?","What are the main smartwears do you have?","what are the smartwears do you have?","what smartwears do you have?"],
+        "responses":[]
+    },
+    {
+        "tag":"earbud",
+        "patterns":["What are the top earbuds you sell?","What are the main earbuds do you sell?","What are the main earbuds found in your company?","What are the main earbuds do you have?","what are the earbuds do you have?","what earbuds do you have?"],
+        "responses":[]
+    },
+    {
+        "tag":"laptop",
+        "patterns":["What are the top laptops you sell?","What are the main laptops do you sell?","What are the main laptops found in your company?","What are the main laptops do you have?","what are the laptops do you have?","what laptops do you have?"],
+        "responses":[]
     }
+
+   
+
     
+
  ]
     
 }

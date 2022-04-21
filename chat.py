@@ -6,10 +6,10 @@ from nltk_utils import bag_of_words, tokenize, stem
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('dataset_format.json','r') as f:
-    intents = json.load(f)
+# with open('dataset_format.json','r') as f:
+#     intents = json.load(f)
 ## todo: write a function that reads model from the local and gives answer to the question
-def chat():
+def chat(intents):
     FILE = "data.pth"
     data = torch.load(FILE)
 
@@ -46,13 +46,13 @@ def chat():
         prob = probs[0][predicted.item()]
         
         if prob.item() > 0.75:
-            for intent in intents["intents"]:
+            for intent in intents:
                 if tag == intent["tag"]:
                     print(f"{bot_name}: {random.choice(intent['responses'])}")
         else:
             print(f"{bot_name}: I do not understand...")
 
-def takeinput(input):
+def takeinput(input,intents):
     FILE = "data.pth"
     data = torch.load(FILE)
 
@@ -86,7 +86,7 @@ def takeinput(input):
     prob = probs[0][predicted.item()]
     
     if prob.item() > 0.75:
-        for intent in intents["intents"]:
+        for intent in intents:
             if tag == intent["tag"]:
                 # print(f"{bot_name}: {random.choice(intent['responses'])}")
                 response = random.choice(intent['responses'])       

@@ -47,7 +47,7 @@ def train(questions):
     all_words = sorted(set(all_words))
     tags = sorted(set(tags))
 
-    ## selecting training features
+    #selecting training features
     X_train = []
     y_train = []
     for (pattern_sentence, tag) in xy:
