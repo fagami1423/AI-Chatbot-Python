@@ -3,3 +3,11 @@ pandas
 nltk
 tflearn
 tensorflow
+torch
+fastapi
+pydantic
+python-dotenv
+starlette
+pymongo
+bson
+

@@ -6,36 +6,74 @@ from nltk_utils import bag_of_words, tokenize, stem
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('dataset_format.json','r') as f:
-    intents = json.load(f)
+# with open('dataset_format.json','r') as f:
+#     intents = json.load(f)
+## todo: write a function that reads model from the local and gives answer to the question
+def chat(intents):
+    FILE = "data.pth"
+    data = torch.load(FILE)
 
-FILE = "data.pth"
-data = torch.load(FILE)
+    input_size = data["input_size"]
+    hidden_size = data["hidden_size"]
+    output_size = data["output_size"]
+    all_words = data["all_words"]
+    tags = data["tags"]
+    model_state = data["model_state"]
 
-input_size = data["input_size"]
-hidden_size = data["hidden_size"]
-output_size = data["output_size"]
-all_words = data["all_words"]
-tags = data["tags"]
-model_state = data["model_state"]
+    model = NeuralNet(input_size, hidden_size, output_size).to(device)
+    model.load_state_dict(model_state)
+    model.eval()
 
-model = NeuralNet(input_size, hidden_size, output_size).to(device)
-model.load_state_dict(model_state)
-model.eval()
+    bot_name = "Raj"
+    print("Let's chat! type 'quit' to exit")
+    while True:
+        sentence = input('You: ')
+        if sentence == "quit":
+            break
 
-bot_name = "Raj"
-print("Let's chat! type 'quit' to exit")
-while True:
-    sentence = input('You: ')
-    if sentence == "quit":
-        break
+        sentence = tokenize(sentence)
+        X = bag_of_words(sentence, all_words)
+        X = X.reshape(1, X.shape[0])
 
-    sentence = tokenize(sentence)
+        X = torch.from_numpy(X)
+        
+
+        output = model(X)
+        _, predicted = torch.max(output, dim=1)
+        tag = tags[predicted.item()]
+
+        probs = torch.softmax(output, dim=1)
+        prob = probs[0][predicted.item()]
+        
+        if prob.item() > 0.75:
+            for intent in intents:
+                if tag == intent["tag"]:
+                    print(f"{bot_name}: {random.choice(intent['responses'])}")
+        else:
+            print(f"{bot_name}: I do not understand...")
+
+def takeinput(input,intents):
+    FILE = "data.pth"
+    data = torch.load(FILE)
+
+    input_size = data["input_size"]
+    hidden_size = data["hidden_size"]
+    output_size = data["output_size"]
+    all_words = data["all_words"]
+    tags = data["tags"]
+    model_state = data["model_state"]
+
+    model = NeuralNet(input_size, hidden_size, output_size).to(device)
+    model.load_state_dict(model_state)
+    model.eval()
+
+    bot_name = "Raj"
+    print(input)
+    sentence = tokenize(input)
     X = bag_of_words(sentence, all_words)
     X = X.reshape(1, X.shape[0])
 
     X = torch.from_numpy(X)
-    
 
     output = model(X)
     _, predicted = torch.max(output, dim=1)
@@ -43,10 +81,16 @@ while True:
 
     probs = torch.softmax(output, dim=1)
     prob = probs[0][predicted.item()]
+
+    probs = torch.softmax(output, dim=1)
+    prob = probs[0][predicted.item()]
     
     if prob.item() > 0.75:
-        for intent in intents["intents"]:
+        for intent in intents:
             if tag == intent["tag"]:
-                print(f"{bot_name}: {random.choice(intent['responses'])}")
+                # print(f"{bot_name}: {random.choice(intent['responses'])}")
+                response = random.choice(intent['responses'])       
     else:
-        print(f"{bot_name}: I do not understand...")
+       # print(f"{bot_name}: I do not understand...")
+        response = "I do not understand.."
+    return {"response":response}
