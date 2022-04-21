@@ -13,7 +13,7 @@ Run the the command to run see the swagger UI of the fast api where you can DO C
 ```
 uvicorn main:app --reload
 ```
-on browser run http://127.0.0.1:8000/docs 
+on browser run http://127.0.0.1:8000/chatbot
 
 
 
