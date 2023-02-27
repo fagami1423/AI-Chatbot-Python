@@ -2,12 +2,12 @@ numpy
 pandas
 nltk
 tflearn
-tensorflow
+# tensorflow
 torch
 fastapi
 pydantic
 python-dotenv
 starlette
 pymongo
-bson
+# bson
 
